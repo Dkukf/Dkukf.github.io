@@ -213,7 +213,7 @@ td {
 #title_text_div_credits {
   position: absolute;
   left: 50%;
-  top: 61.5%;
+  top: 56%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -223,6 +223,8 @@ td {
   position: relative;
   top: 18pt;
   left: 45pt;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .credits_names {
