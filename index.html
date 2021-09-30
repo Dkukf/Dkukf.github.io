@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Kin Kwan Leung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./website_stylesheet.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Top section of the webpage -->
+    <div>
+      <img src="./Images/Hardware.jpg" id="image_above_fold"/>
+      <div id="filter"></div>
+      <a href="./index.html" id="home_link">Kin Kwan Leung</a>
+      <div id="title_text_div">
+        <h1 id="page_title">Welcome to My Website</h1>
+        <h3 id="page_subtitle">Please click on one of the buttons<br>below to get started</h3>
+        <input type="button" id="about_me_button" value="About Me" onclick="openAboutMe()">
+      </div>
+    </div>
+
+    <div id="about_me_div">
+      <button type="button" id="chevron_button" onmouseover="changeToWhiteChevron()"
+              onmouseout="changeToYellowChevron()" onclick="closeAboutMe()">
+        <img src="./Images/Chevron_yellow.png" id="chevron_image"/>
+      </button>
+      <div id="about_me_content_div">
+        <img src="./Images/Profile_picture.jpg" id="profile_picture"/>
+        <h3 id="about_me_text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt
+          purus diam, sed mollis nunc finibus et. Maecenas eu tellus id urna feugiat
+          condimentum. Etiam porttitor ante ut dapibus ullamcorper. Fusce vitae dapibus
+          erat. Maecenas nibh urna, vulputate dictum ultrices a, pellentesque at purus.
+          Vestibulum lectus eros, placerat non erat sit amet, lobortis pharetra sem.
+          Aliquam enim metus, ultrices et vestibulum eu, laoreet non justo. Aliquam
+          pharetra consequat ipsum sit amet semper. Nam at tortor a tellus condimentum
+          egestas. Donec finibus turpis sapien, sed cursus justo dignissim ac. Aliquam
+          venenatis nec felis ac ornare. Quisque fringilla porttitor risus quis pulvinar.
+          Donec condimentum ut orci eget auctor. Cras in ornare diam. Morbi et vulputate turpis.
+          Donec luctus turpis ut turpis lobortis, vitae dapibus tellus ornare.
+          Ut blandit tincidunt sem eget imperdiet. Mauris sodales nisi nec massa sodales venenatis.
+          Nam eget nisi eget est cursus varius. Vivamus elementum ultrices urna et finibus. Maecenas
+          ullamcorper, leo ac porttitor egestas, diam lacus cursus felis, sed fermentum nunc erat eu ex.
+          Etiam a lectus nec neque posuere congue a et sapien. Ut pulvinar orci et malesuada tempus.
+          Integer finibus, lorem at condimentum consequat, justo lectus consectetur ligula, ut tincidunt
+          odio ante ut dui. Nulla nec placerat libero. Praesent auctor, mauris cursus porta faucibus, enim
+          velit varius libero, id dictum nisl nibh eget metus. Curabitur in lorem ipsum. Morbi lacus arcu,
+          porttitor a sem et, fermentum sollicitudin sem. Curabitur in sapien semper, auctor felis vitae,
+          sollicitudin mauris.
+        </h3>
+      </div>
+    </div>
+
+    <!-- Central/Main section of the webpage -->
+    <table id="button_table">
+      <tr>
+        <!-- CV image button -->
+        <td>
+          <div class="main_button_div">
+            <img src="./Images/Writing.jpg" class="main_image"/>
+            <a href="./cv.html" class="main_yellow_button">CV</a>
+            <div class="main_button_left_line yellow_button_line"></div>
+            <div class="main_button_top_line yellow_button_line"></div>
+            <div class="main_button_right_line yellow_button_line"></div>
+            <div class="main_button_bottom_line yellow_button_line"></div>
+          </div>
+        </td>
+
+        <!-- Projects image button -->
+        <td>
+          <div class="main_button_div">
+            <img src="./Images/Code.jpg" class="main_image"/>
+            <a href="./projects.html" class="main_gray_button">Projects</a>
+            <div class="main_button_left_line gray_button_line"></div>
+            <div class="main_button_top_line gray_button_line"></div>
+            <div class="main_button_right_line gray_button_line"></div>
+            <div class="main_button_bottom_line gray_button_line"></div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <!-- Blog image button -->
+        <td>
+          <div class="main_button_div">
+            <img src="./Images/Camera.jpg" class="main_image"/>
+            <a href="./blog.html" class="main_gray_button">Blog</a>
+            <div class="main_button_left_line gray_button_line"></div>
+            <div class="main_button_top_line gray_button_line"></div>
+            <div class="main_button_right_line gray_button_line"></div>
+            <div class="main_button_bottom_line gray_button_line"></div>
+          </div>
+        </td>
+
+        <!-- Contact details image button -->
+        <td>
+          <div class="main_button_div">
+            <img src="./Images/Contact.jpg" class="main_image"/>
+            <a href="./contact_details.html" class="main_yellow_button">Contact Details</a>
+            <div class="main_button_left_line yellow_button_line"></div>
+            <div class="main_button_top_line yellow_button_line"></div>
+            <div class="main_button_right_line yellow_button_line"></div>
+            <div class="main_button_bottom_line yellow_button_line"></div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Footer of the webpage -->
+    <div id="footer_div">
+      <div id="links_div">
+        <table id="links_table">
+          <tr>
+            <th><h2 id="links_title">Links</h2></th>
+          </tr>
+          <tr>
+            <td><a href="./index.html" class="footer_links">Home</a></td>
+            <td><a href="./contact_details.html" class="footer_links">Contact Details</a></td>
+          </tr>
+
+          <tr>
+            <td><a href="./cv.html" class="footer_links">CV</a></td>
+            <td><a href="./credits.html" class="footer_links">Credits</a></td>
+          </tr>
+
+          <tr>
+            <td><a href="./projects.html" class="footer_links">Projects</a></td>
+          </tr>
+
+          <tr>
+            <td><a href="./blog.html" class="footer_links">Blog</a></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="logos_list_div">
+        <div class="logo_button">
+          <a href="mailto:kkderekleung@gmail.com">
+            <img src="./Icons/Email.png" class="social_media_icon"/>
+          </a>
+        </div>
+
+        <div class="logo_button">
+          <a href="https://en-gb.facebook.com/derek.leung.165" target="_blank">
+            <img src="./Icons/Facebook.png" class="social_media_icon"/>
+          </a>
+        </div>
+
+        <div class="logo_button">
+          <a href="https://www.instagram.com/plantinglamb" target="_blank">
+            <img src="./Icons/Instagram.png" class="social_media_icon"/>
+          </a>
+        </div>
+
+        <div class="logo_button">
+          <a href="https://www.linkedin.com/in/kin-leung-218768213" target="_blank">
+            <img src="./Icons/Linkedin.png" class="social_media_icon"/>
+          </a>
+        </div>
+      </div>
+
+      <p id="copyright_logo">© 2021 Created by Kin Kwan Leung</p>
+    </div>
+
+    <!-- JavaScript files are linked from here on -->
+    <script src="website_scripts.js"></script>
+  </body>
+
+</html>

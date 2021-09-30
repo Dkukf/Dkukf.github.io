@@ -1,0 +1,457 @@
+/* This CSS stylesheet was created by Kin Kwan Leung on the 11th of September
+   2021 for the personal website of Kin Kwan Leung.
+   The main colours used by the website are as follows:
+   Yellow: #FADA65 and #C69C06
+   Gray: #999999
+   Dark blue: #1F2833 */
+
+/* --- This is for the HTML tags themselves --- */
+
+body { margin: 0; }
+
+h1, h2, h3, h4, p { font-family: Arvo, serif; }
+h1 { font-size: 26pt; }
+h2 { font-size: 16pt; }
+h3 { font-size: 14pt; }
+h4 { font-size: 11pt; }
+p { font-size: 10pt; }
+
+input, a, button, .logo_button {
+  cursor: pointer;
+  font-family: Arvo, serif;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+th {
+  text-align: left;
+  padding-right: 30px;
+  margin: 0;
+}
+
+td {
+  text-align: left;
+}
+
+/* --- This is for the above fold section of the webpage --- */
+
+#image_above_fold {
+  width: 100vw;
+  height: 100vh;
+}
+
+#filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.6;
+  background-color: black;
+}
+
+#home_link {
+  position: absolute;
+  top: 18px;
+  left: 34px;
+  font-size: 14pt;
+  color: #FADA65;
+}
+
+#home_link:hover {
+  color: white;
+}
+
+#title_text_div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#page_title {
+  color: #FADA65;
+  margin: 8px;
+}
+
+#page_subtitle {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+/* Exclusively for Main webpage */
+
+#about_me_button {
+  background-color: #FADA65;
+  color: #1F2833;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 22px;
+  transition-duration: 0.5s;
+  margin-top: 15px;
+  font-size: 12pt;
+}
+
+#about_me_button:hover {
+  border: 3px solid;
+  border-color: #FADA65;
+  background-color: white;
+  margin-top: 30px;
+}
+
+#about_me_div {
+  position: fixed;
+  bottom: -85vh;
+  height: 85vh;
+  width: 100vw;
+  background-color: #1F2833;
+  transition-duration: 1.5s;
+  z-index: 1;
+}
+
+#about_me_div.active {
+  transform: translateY(-85vh);
+}
+
+#about_me_div.inactive {
+  transform: translateY(85vh);
+  transition-duration: 2s;
+}
+
+#chevron_button {
+  position: absolute;
+  top: 3.5vw;
+  left: 50vw;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  border: 0;
+  background: 0;
+}
+
+#chevron_image {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  height: 25pt;
+}
+
+#about_me_content_div {
+  position: relative;
+  top: 8vh;
+  left: 5vw;
+}
+
+#profile_picture {
+  height: 35vh;
+  width: 35vh;
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  float: left;
+  margin: 20pt;
+}
+
+#about_me_text {
+  position: relative;
+  padding-top: 10vh;
+  left: 3vw;
+  width: 85vw;
+  font-family: "Open Sans", sans-serif;
+  line-height: 25pt;
+  color: white;
+  text-align: justify;
+}
+
+/* Exclusively for Contact Details webpage */
+
+.contact_details_link {
+  margin: auto;
+  margin-top: 15pt;
+  background-color: #FADA65;
+  border-radius: 16px;
+  width: 75%;
+  vertical-align: center;
+  transition-duration: 0.5s;
+}
+
+.contact_details_link:hover {
+  background-color: white;
+  border: 4pt solid;
+  border-color: #FADA65;
+}
+
+.contact_details_icon {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact_details_text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10pt;
+  color: #1F2833;
+}
+
+/* Exclusively for Credits webpage */
+
+#filter_credits {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.6;
+  background-color: black;
+}
+
+#title_text_div_credits {
+  position: absolute;
+  left: 50%;
+  top: 61.5%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#credits_table {
+  border-spacing: 0 0;
+  position: relative;
+  top: 18pt;
+  left: 45pt;
+}
+
+.credits_names {
+  color: #FADA65;
+  font-size: 12pt;
+}
+
+.credits_names:hover {
+  color: white;
+}
+
+.credits_information {
+  color: white;
+  margin: 8pt;
+  font-size: 12pt;
+}
+
+.credits_information a {
+  display: inline;
+}
+
+.credits_information a:hover {
+  color: #FADA65;
+}
+
+/* --- This is for the central/main section of the webpage --- */
+
+/* Exclusively for Main webpage */
+
+#button_table {
+  margin: auto;
+  border-spacing: 20pt 14pt;
+}
+
+.main_button_div {
+  position: relative;
+}
+
+.main_image {
+  width: 36vw;
+  height: 40vh;
+  display: block;
+  transition-duration: 1.2s;
+}
+
+.main_yellow_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36vw;
+  height: 40vh;
+  border: 0;
+  background-color: rgba(198, 156, 6, 0.6);
+  font-size: 20pt;
+  color: white;
+  transition-duration: 1.2s;
+  text-align: center;
+  line-height: 40vh;
+  vertical-align: middle;
+}
+
+.main_gray_button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36vw;
+  height: 40vh;
+  border: 0;
+  background-color: rgba(153, 153, 153, 0.7);
+  font-size: 20pt;
+  color: white;
+  transition-duration: 1.2s;
+  text-align: center;
+  line-height: 40vh;
+  vertical-align: middle;
+}
+
+/* Transitions for Main webpage */
+
+.main_button_left_line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 3px;
+  transition-duration: 1.2s;
+  opacity: 0;
+}
+
+.main_button_top_line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 36vw;
+  transition-duration: 1.2s;
+  opacity: 0;
+}
+
+.main_button_right_line {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40vh;
+  width: 3px;
+  transition-duration: 1.2s;
+  opacity: 0;
+}
+
+.main_button_bottom_line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 36vw;
+  transition-duration: 1.2s;
+  opacity: 0;
+}
+
+.yellow_button_line { background-color: #C69C06; }
+
+.gray_button_line { background-color: #999999; }
+
+.main_button_div:hover .main_button_left_line {
+  transform: translateX(35.8vw);
+  opacity: 1;
+}
+
+.main_button_div:hover .main_button_top_line {
+  transform: translateY(39.8vh);
+  opacity: 1;
+}
+
+.main_button_div:hover .main_button_right_line {
+  transform: translateX(-35.8vw);
+  opacity: 1;
+}
+
+.main_button_div:hover .main_button_bottom_line {
+  transform: translateY(-39.8vh);
+  opacity: 1;
+}
+
+.main_button_div:hover .main_image {
+  transform: scale(0.9, 0.9);
+}
+
+.main_button_div:hover .main_yellow_button {
+  transform: scale(0.9, 0.9);
+}
+
+.main_button_div:hover .main_gray_button {
+  transform: scale(0.9, 0.9);
+}
+
+/* --- This is for the footer of the webpage --- */
+
+#footer_div {
+  position: relative;
+  width: 100vw;
+  height: 200px;
+  background-color: #1F2833;
+}
+
+#links_div {
+  position: absolute;
+  top: 0;
+  left: 15%;
+}
+
+#links_title {
+  color: white;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+#links_table {
+  border-spacing: 40pt 5pt;
+  margin-left: 0;
+  border-left: 0;
+}
+
+.footer_links {
+  font-size: 11pt;
+  margin-bottom: 2px;
+}
+
+.footer_links:hover {
+  color: #FADA65;
+}
+
+#logos_list_div {
+  position: absolute;
+  text-align: center;
+  left: 50vw;
+  bottom: 25px;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.logo_button {
+  padding: 8px;
+  border-radius: 50%;
+  border: 1pt solid white;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  transition-duration: 0.4s;
+}
+
+.logo_button:hover {
+  background-color: #FADA65;
+}
+
+.social_media_icon {
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+#copyright_logo {
+  position: absolute;
+  text-align: center;
+  left: 50vw;
+  bottom: 0;
+  color: white;
+  transform: translate(-50%, -50%);
+  margin-bottom: 3px;
+  font-size: 9pt;
+}
