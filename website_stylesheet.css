@@ -113,6 +113,7 @@ td {
   background-color: #1F2833;
   transition-duration: 1.5s;
   z-index: 1;
+  overflow: scroll;
 }
 
 #about_me_div.active {
@@ -155,9 +156,14 @@ td {
   margin: 20pt;
 }
 
+#about_me_title {
+  position: relative;
+  left: 5vw;
+  color: #FADA65;
+}
+
 #about_me_text {
   position: relative;
-  padding-top: 10vh;
   left: 3vw;
   width: 85vw;
   font-family: "Open Sans", sans-serif;
