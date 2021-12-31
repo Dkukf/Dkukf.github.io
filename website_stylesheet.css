@@ -172,6 +172,31 @@ td {
   text-align: justify;
 }
 
+/* Exclusively for CV webpage */
+
+#cv_download_button {
+  background-color: #FADA65;
+  color: #1F2833;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 22px;
+  transition-duration: 0.5s;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+#cv_download_button:hover {
+  border: 3px solid;
+  border-color: #FADA65;
+  background-color: white;
+  margin-top: 20px;
+}
+
+#cv_download_button_text {
+  margin: 0;
+  font-size: 12pt;
+}
+
 /* Exclusively for Contact Details webpage */
 
 .contact_details_link {
@@ -386,10 +411,22 @@ td {
   transform: scale(0.9, 0.9);
 }
 
+/* Exclusively for CV webpage */
+
+#cv_div {
+  margin: auto;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  width: 65vw;
+  height: 120vh;
+}
+
 /* Exclusively for Projects webpage */
 
 #projects_table {
   width: 100vw;
+  padding-top: 6vh;
+  padding-bottom: 8vh;
 }
 
 .projects_table_cell {
@@ -422,9 +459,14 @@ td {
   padding-right: 7vw;
 }
 
+.project_date {
+  color: #999999;
+  font-size: 13pt;
+  margin: 0;
+}
+
 .project_subtitle {
   color: #1F2833;
-  margin-top: 1vh;
   line-height: 30px;
   margin-bottom: 4vh;
   padding-left: 7vw;
