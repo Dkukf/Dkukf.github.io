@@ -439,30 +439,41 @@ td {
   border-color: transparent;
 }
 
+.project_title_button {
+  padding-top: 3vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin: 0;
+  border: 0;
+  background: 0;
+}
+
+.project_title_button:hover {
+  text-decoration: underline;
+  text-decoration-color: #999999;
+}
+
 .project_title {
   font-size: 20pt;
   color: #999999;
-  padding-top: 3vh;
-  padding-left: 7vw;
-  padding-right: 7vw;
-}
-
-.project_title:hover {
-  text-decoration: underline;
 }
 
 .project_title_unlinked {
   font-size: 20pt;
   color: #999999;
   padding-top: 3vh;
-  padding-left: 7vw;
-  padding-right: 7vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 .project_date {
   color: #999999;
   font-size: 13pt;
-  margin: 0;
+  margin-top: 0;
+}
+
+.project_images {
+  height: 20vh;
 }
 
 .project_subtitle {
@@ -474,11 +485,35 @@ td {
   font-size: 13pt;
 }
 
+.projects_pdf_viewer {
+  height: 0;
+  transition-duration: 0.8s;
+  text-align: center;
+}
+
+.projects_pdf_viewer embed { width: 70vw; }
+
+.projects_pdf_viewer.active { height: 100vh; }
+
+.projects_pdf_viewer.inactive { height: 0; }
+
 .projects_separator {
   height: 2px;
   border-width: 0;
   background-color: #1F2833;
   width: 22vw;
+}
+
+#design_two_image {
+  height: 23vh;
+}
+
+#individual_project_image {
+  height: 15vh;
+}
+
+#design_four_image {
+  height: 40vh;
 }
 
 /* --- This is for the footer of the webpage --- */
