@@ -155,13 +155,25 @@
       <tr>
         <td class="projects_table_cell" colspan="2">
           <div class="project_div">
-            <h2 class="project_title_unlinked">MEng Group Design - Solar Panel Cleaner</h2>
-            <h3 class="project_date">Sep. 2021 - Present</h3>
+            <button class="project_title_button" type="button" onclick="openProjectsPDFViewer('fourth_viewer', './Projects/Design_4_Solar_Panel_Cleaner.pdf')">
+              <h2 class="project_title">MEng Group Design - Solar Panel Cleaner</h2>
+            </button>
+            <h3 class="project_date">Sep. 2021 - May 2022</h3>
             <img src="./Images/Design_4.png" alt="3D model of solar panel cleaner design" class="project_images" id="design_four_image"/>
-            <h3 class="project_subtitle">A group project involving the design and manufacture of a robot that is capable of cleaning solar panels on an offshore solar farm. This project is currently ongoing and will be completed by May 2022.</h3>
+            <h3 class="project_subtitle">A group project involving the design and manufacture of a robot that is capable of cleaning solar panels on an offshore solar farm.</h3>
+            <a class="projects_download_button" href="./Projects/Design_4_Solar_Panel_Cleaner.pdf" download>
+              <h3 class="projects_download_button_text">Download Report</h2>
+            </a>
           </div>
         </td>
       </tr>
+
+      <tr>
+        <td class="projects_pdf_viewer" id="fourth_viewer" colspan="2">
+          <embed src="./Projects/Design_4_Solar_Panel_Cleaner.pdf" id="fourth_viewer_embed" type="application/pdf" width="100%" height="100%"/>
+        </td>
+      </tr>
+
     </table>
 
     <!-- Footer of the webpage -->
