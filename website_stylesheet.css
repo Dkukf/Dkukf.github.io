@@ -765,8 +765,15 @@ td {
   
   /* Hero section adjustments */
   #image_above_fold {
-    height: 80vh;
+    height: 60vh;
     width: 100%;
+  }
+  
+  /* Target the parent div containing the hero section */
+  body > div:first-child {
+    position: relative;
+    height: 60vh;
+    margin-bottom: 0.5vh;
   }
   
   #home_link {
