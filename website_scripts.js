@@ -73,3 +73,45 @@ function clearProjectsPDFViewer(givenViewerId) {
     } // if
   } // for
 } // clearProjectsPDFViewer function
+
+// --------------- MOBILE NAVIGATION ---------------
+
+// This function toggles the mobile navigation menu by adding/removing the
+// 'active' class from the banner_nav element.
+function toggleMobileMenu() {
+  const bannerNav = document.getElementById('banner_nav');
+  const toggleButton = document.querySelector('.mobile-menu-toggle');
+  
+  // Toggle active class on both nav and button
+  bannerNav.classList.toggle('active');
+  toggleButton.classList.toggle('active');
+  
+  // Toggle aria-expanded for accessibility
+  const isOpen = bannerNav.classList.contains('active');
+  toggleButton.setAttribute('aria-expanded', isOpen);
+} // toggleMobileMenu function
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const bannerNav = document.getElementById('banner_nav');
+  const mobileToggle = document.querySelector('.mobile-menu-toggle');
+  
+  if (bannerNav && mobileToggle && bannerNav.classList.contains('active')) {
+    if (!bannerNav.contains(event.target) && !mobileToggle.contains(event.target)) {
+      bannerNav.classList.remove('active');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', false);
+    }
+  }
+});
+
+// --------------- AUTO-UPDATE COPYRIGHT YEAR ---------------
+
+// This function updates the copyright year to the current year
+document.addEventListener('DOMContentLoaded', function() {
+  const copyrightElement = document.getElementById('copyright_logo');
+  if (copyrightElement) {
+    const currentYear = new Date().getFullYear();
+    copyrightElement.innerHTML = `© ${currentYear} Created by Kin Kwan Leung`;
+  }
+});
