@@ -172,8 +172,10 @@ td {
 #about_me_content_div {
   position: relative;
   top: 8vh;
-  left: 5vw;
-  width: 90vw;
+  left: 0;
+  width: 100%;
+  padding: 0 5vw;
+  box-sizing: border-box;
 }
 
 #profile_picture {
@@ -187,18 +189,21 @@ td {
 
 #about_me_title {
   position: relative;
-  left: 5vw;
+  left: 0;
   color: #FADA65;
+  padding: 0 5vw;
 }
 
 #about_me_text {
   position: relative;
-  left: 3vw;
-  width: 85vw;
+  left: 0;
+  width: 100%;
   font-family: "Open Sans", sans-serif;
   line-height: 25pt;
   color: white;
   text-align: justify;
+  padding: 0 3vw;
+  box-sizing: border-box;
 }
 
 /* Exclusively for CV webpage */
@@ -624,6 +629,8 @@ td {
   width: 20px;
   text-align: center;
   text-decoration: none;
+  display: block;
+  margin: 0 auto;
 }
 
 #copyright_logo {
@@ -890,6 +897,241 @@ td {
     margin: 20px auto 0 auto;
     text-align: center;
     width: 100%;
+  }
+  
+  /* Index page specific adjustments */
+  #button_table {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2vh 0;
+    border-spacing: 0;
+    table-layout: fixed;
+  }
+  
+  #button_table tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  #button_table tr {
+    display: contents;
+  }
+  
+  #button_table td {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1vh 0;
+  }
+  
+  /* Swap Blog and Contact Details order on mobile for index page */
+  .blog-button-cell {
+    order: 4;
+  }
+  
+  .contact-button-cell {
+    order: 3;
+  }
+  
+  .main_button_div {
+    width: 100%;
+    margin-bottom: 2vh;
+    position: relative;
+  }
+  
+  .main_image {
+    width: 100%;
+    height: 20vh;
+    max-height: 200px;
+  }
+  
+  .main_yellow_button,
+  .main_gray_button {
+    width: 100%;
+    height: 20vh;
+    max-height: 200px;
+    font-size: 1.125rem;
+    line-height: 20vh;
+  }
+  
+  /* Hide animation lines on mobile */
+  .main_button_left_line,
+  .main_button_top_line,
+  .main_button_right_line,
+  .main_button_bottom_line {
+    display: none !important;
+  }
+  
+  /* Disable hover transforms on mobile */
+  .main_button_div:hover .main_image,
+  .main_button_div:hover .main_yellow_button,
+  .main_button_div:hover .main_gray_button {
+    transform: none;
+  }
+  
+  /* About Me section adjustments */
+  #about_me_div {
+    width: 100%;
+    height: 90vh;
+    bottom: -90vh;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+  }
+  
+  #chevron_button {
+    top: 8vw;
+  }
+  
+  #about_me_div.active {
+    transform: translateY(-90vh);
+  }
+  
+  #about_me_div.inactive {
+    transform: translateY(90vh);
+  }
+  
+  #profile_picture {
+    height: 25vh;
+    width: 25vh;
+    margin: 10pt;
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  
+  #about_me_content_div {
+    top: 8vh;
+    left: 0;
+    width: 90%;
+    padding: 0;
+    margin: 0 5%;
+    box-sizing: border-box;
+  }
+  
+  #about_me_title {
+    left: 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  #about_me_text {
+    left: 0;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding: 0 0 5vh 0;
+    margin-top: 20px;
+  }
+  
+  /* Projects page specific adjustments */
+  #projects_table {
+    display: block;
+    width: 100%;
+    padding: 3vh 0;
+    overflow-x: hidden;
+  }
+  
+  #projects_table tbody {
+    display: block;
+    width: 100%;
+  }
+  
+  #projects_table tr {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .projects_table_cell {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project_div {
+    margin-bottom: 4vh;
+    border: none;
+  }
+  
+  .project_title_button {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    cursor: default;
+  }
+  
+  .project_title_button:hover {
+    text-decoration: none;
+  }
+  
+  .project_title {
+    font-size: 1.25rem;
+    padding: 2vh 3vw 0 3vw;
+  }
+  
+  .project_title_unlinked {
+    font-size: 1.25rem;
+    padding: 2vh 3vw 0 3vw;
+  }
+  
+  .project_date {
+    font-size: 0.875rem;
+  }
+  
+  .project_subtitle {
+    font-size: 0.875rem;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    line-height: 1.5;
+  }
+  
+  .project_images {
+    height: 15vh;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Target Design 3 image specifically */
+  img[src*="Design_3.png"] {
+    height: 13vh !important;
+  }
+  
+  #design_two_image {
+    height: 18vh;
+  }
+  
+  #individual_project_image {
+    height: 12vh;
+  }
+  
+  #design_four_image {
+    height: 25vh;
+  }
+  
+  .projects_download_button {
+    margin: 1.5vh auto 1.5vh auto;
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+  
+  .projects_download_button_text {
+    font-size: 0.875rem;
+  }
+  
+  .projects_pdf_viewer {
+    display: none !important;
+  }
+  
+  .projects_pdf_viewer embed {
+    display: none;
+  }
+  
+  .projects_separator {
+    display: none;
   }
   
   /* Credits page specific adjustments */
