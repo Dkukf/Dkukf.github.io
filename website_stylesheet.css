@@ -263,9 +263,10 @@ td {
 #title_text_div_credits {
   position: absolute;
   left: 50%;
-  top: 56%;
+  top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
 #credits_table {
@@ -273,8 +274,6 @@ td {
   position: relative;
   top: 18pt;
   left: 45pt;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .credits_names {
@@ -891,6 +890,52 @@ td {
     margin: 20px auto 0 auto;
     text-align: center;
     width: 100%;
+  }
+  
+  /* Credits page specific adjustments */
+  #title_text_div_credits {
+    width: 90%;
+    padding: 0 5%;
+    overflow: visible;
+  }
+  
+  #credits_table {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    table-layout: fixed;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  
+  .credits_names {
+    font-size: 0.875rem;
+    white-space: normal;
+    line-height: 1.4;
+  }
+  
+  .credits_information {
+    font-size: 0.75rem;
+    margin: 4pt;
+    white-space: normal;
+    line-height: 1.5;
+  }
+  
+  .credits_information a {
+    word-break: break-word;
+  }
+  
+  #credits_table th {
+    padding-right: 10px;
+    vertical-align: top;
+    width: 40%;
+  }
+  
+  #credits_table td {
+    vertical-align: top;
+    width: 60%;
   }
 }
 
