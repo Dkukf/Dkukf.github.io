@@ -709,6 +709,8 @@ td {
   margin: 0 0 5px 0;
   position: relative;
   top: -12.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 
@@ -720,6 +722,9 @@ td {
   margin: 0;
   position: relative;
   top: -12.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .timeline-date {
@@ -730,6 +735,8 @@ td {
   font-family: "Open Sans", sans-serif;
   position: relative;
   top: -12.5px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 
@@ -1178,6 +1185,9 @@ td {
     font-size: 0.875rem;
     position: relative;
     top: -5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
   
   .timeline-date {
