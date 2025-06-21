@@ -108,10 +108,71 @@ document.addEventListener('click', function(event) {
 // --------------- AUTO-UPDATE COPYRIGHT YEAR ---------------
 
 // This function updates the copyright year to the current year
-document.addEventListener('DOMContentLoaded', function() {
+function updateCopyrightYear() {
   const copyrightElement = document.getElementById('copyright_logo');
   if (copyrightElement) {
     const currentYear = new Date().getFullYear();
     copyrightElement.innerHTML = `© ${currentYear} Created by Kin Kwan Leung`;
   }
+}
+
+// --------------- CV TIMELINE GENERATOR ---------------
+
+// Function to generate timeline HTML from data
+function generateTimeline(timelineData) {
+  const timelineSection = document.getElementById('cv_timeline_section');
+  if (!timelineSection) return;
+
+  let timelineHTML = `
+    <div class="timeline-container">
+      <div class="timeline-vertical-line"></div>
+      <div class="timeline-bottom-circle"></div>`;
+
+  timelineData.forEach((item, index) => {
+    // Calculate position based on total length to keep oldest item fixed
+    // The oldest item (last in reversed array) should always be on the same side
+    const totalItems = timelineData.length;
+    const position = (totalItems - index - 1) % 2 === 0 ? 'left' : 'right';
+    // Use grey triangle for the first item in the visual timeline (top)
+    const triangleType = index === 0 ? 'timeline-top-triangle' : 'timeline-intersection-triangle';
+    const firstClass = index === 0 ? ' timeline-first-item' : '';
+    
+    timelineHTML += `
+      <div class="timeline-item timeline-item-${position}${firstClass}">
+        <div class="timeline-horizontal-line"></div>
+        <div class="${triangleType}"></div>
+        <div class="timeline-content">
+          <h3 class="timeline-title">${item.title}</h3>
+          <p class="timeline-text">${item.text}</p>
+        </div>
+      </div>`;
+  });
+
+  timelineHTML += `
+    </div>`;
+
+  timelineSection.innerHTML = timelineHTML;
+}
+
+// Function to load timeline data from embedded JSON
+function loadTimelineData() {
+  try {
+    const timelineDataElement = document.getElementById('timeline-data');
+    if (timelineDataElement) {
+      const timelineData = JSON.parse(timelineDataElement.textContent);
+      // Reverse the array so the first item appears at the bottom
+      const reversedData = timelineData.reverse();
+      generateTimeline(reversedData);
+    } else {
+      console.error('Timeline data element not found');
+    }
+  } catch (error) {
+    console.error('Error parsing timeline data:', error);
+  }
+}
+
+// Run functions when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  updateCopyrightYear();
+  loadTimelineData();
 });
