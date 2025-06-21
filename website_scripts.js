@@ -143,6 +143,7 @@ function generateTimeline(timelineData) {
         <div class="${triangleType}"></div>
         <div class="timeline-content">
           <h3 class="timeline-title">${item.title}</h3>
+          ${item.date ? `<p class="timeline-date">${item.date}</p>` : ''}
           <p class="timeline-text">${item.text}</p>
         </div>
       </div>`;
