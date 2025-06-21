@@ -1,2 +1,4 @@
 # Ignore all Uncompressed files.
 /Uncompressed*
+.DS_Store
+CLAUDE.md
