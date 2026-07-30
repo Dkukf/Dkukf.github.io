@@ -73,15 +73,3 @@ function clearProjectsPDFViewer(givenViewerId) {
     } // if
   } // for
 } // clearProjectsPDFViewer function
-
-// --------------- EXCLUSIVELY FOR FOOTERS ---------------
-
-// This function replaces the copyright years with the current year.
-function populateCopyright()
-{
-  let year = new Date().getFullYear();
-  const copyrightText = document.getElementById('copyright');
-  copyrightText.textContent = "© " + year + " Created by Kin Kwan Leung";
-} // populateCopyright function
-
-populateCopyright();
