@@ -18,6 +18,11 @@
     <div>
       <img src="./Images/Writing.jpg" alt="Pen and notebook" id="image_above_fold"/>
       <a href="./index.html" id="home_link">Kin Kwan Leung</a>
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav id="banner_nav">
         <ul id="banner_list">
           <li><a href="./cv.html" id="cv_link" class="banner_links">CV</a></li>
@@ -36,10 +41,11 @@
     </div>
 
     <!-- Central/Main section of the webpage -->
-
-    <div id="cv_div">
-      <embed src="./Kin_Leung_CV.pdf" type="application/pdf" width="100%" height="100%"/>
+    
+    <div id="cv_timeline_section">
+      <!-- Timeline will be dynamically generated here by JavaScript -->
     </div>
+
 
     <!-- Footer of the webpage -->
     <div id="footer_div">
@@ -92,6 +98,50 @@
     </div>
 
     <!-- JavaScript files are linked from here on -->
+    <script id="timeline-data" type="application/json">
+[
+  {
+    "title": "Timeline Start",
+    "date": "2020",
+    "text": "Beginning of the journey"
+  },
+  {
+    "title": "Lorem Ipsum Dolor",
+    "date": "2021",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "title": "Consectetur Adipiscing",
+    "date": "2022",
+    "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "title": "Sed Do Eiusmod",
+    "date": "2023",
+    "text": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "title": "Tempor Incididunt",
+    "date": "2024",
+    "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "title": "Tempor2 Incididunt",
+    "date": "January 2025",
+    "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "title": "Tempor3 Incididunt",
+    "date": "March 2025",
+    "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+  {
+    "title": "Tempor4 Incididunt",
+    "date": "June 2025",
+    "text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  }
+]
+    </script>
     <script src="website_scripts.js"></script>
   </body>
 
